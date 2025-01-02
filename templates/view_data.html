@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Data</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Board of Wishes</h1>
+        
+        <!-- Bagian Form Input -->
+        <form id="wish-form">
+            <div>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div>
+                <label for="harapan">Harapan:</label>
+                <input type="text" id="harapan" name="harapan">
+            </div>
+            <div>
+                <label for="untuk">Untuk Siapa:</label>
+                <input type="text" id="untuk" name="untuk">
+            </div>
+
+            <button type="button" id="add-data">Add Data</button>
+            <button type="button" id="save-data">Save Data</button>
+            
+        </form>
+
+        <!-- Bagian untuk Menampilkan Data -->
+        <pre>{{ data | tojson(indent=2) }}</pre>
+
+        <footer>&copy; 2024 Your Project</footer>
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
